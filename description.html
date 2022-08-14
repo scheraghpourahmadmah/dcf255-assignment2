@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IPV6 Advantages and New Implementations">
+    <meta name="keywords" content="topic:Introduction, Security Concern, Types of Addresses">
+    <meta name="author" content="Sholeh Cheraghpour ">
+    <title>Description</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+            <h1>Data Communications Fundamentals <span class="highlight">Assignment02</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="description.html">Description</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe to our Website</h1>
+            <form >
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">Description</h1>
+                <p>This report will give you the knowledges about the Network Layer Internet Protocols and Types of Addresses, their structure. And in particular, about the Ipv4 & iPv6 with 128-bit addresses. </p>
+                <h1 class="page-title">Introduction</h1>
+                <p>From its initial release in 1981, Internet Protocol Version 4 has been the backbone of our beloved interconnected creation that brings together everyone around the world by creating standards on how we do so. This interconnectivity has broken down barriers that separate people around the world and unites the collective knowledge of the world. This integral creation to mankind that many depend upon for life and carrier is known as the Internet. The set of standards called Internet Protocol Version 4 (IPV4) provides the standards for routing network traffic. However despite it's long-standing history, this set of standards described in Internet Engineering Task Force (IETF) request for comment documents has a great deal of limitations and downfalls as it is now greatly outdated. IPV6 is a large advance from the previous 4th version because it introduces 128-bit addresses, improved security and simpler address deployment with SLAAC. This essay also covers the information about the types of deployments models, the types of addresses and migration from IPv4 to IPv6 plan.</p>
+                <h1 class="page-title">128-bit Addresses</h1>
+                <p>As of February 3rd, 2011 every address in IPV4's 32-bit addresses have been exhausted. That is to say, all 4, 294, 967, 296 addresses have been assigned despite many efforts at slowing it down by using such methods as Network Address Translation being deployed in routers by allowing multiple hosts on a private network this limitation has made a new version of the protocol a requirement to the development of the Internet. Due to this exhaustion, IPV6 was designed to have a much larger amount of addresses than IPV4, infact it's 164-bit addresses allows 340 trillion trillion trillion addresses (3.4x10^38), which is 7.9x10^28 times more addresses than IPV4. This is enough 670 quadrillion addresses per square millimeter of the earths surface. These addresses though large can still be represented moderately easily, encourage route aggregation to reduce the amount of routing tables needed, and will reduce the need for further protocols to allot addresses.
+                    The older IPv4 was often represented by dotted decimal notation with numeric digits at a maximum of 12. An example of a standard local router's IP address is http://192.168.2.1 and an example of Google’s IPV4 address is http://74.125.224.72. In contrast, the format of IPv6 is best represented as hexadecimal digits in dotted decimal notation, which allows a visual representation of the address that is more memorable by using a maximum of 32 hexadecimal digits. However, despite the change in addresses format, IPv6 is fully backwards compatible and can support the former IPv4 addresses. This backwards compatibility is critical to the deployment of IPv6, as currently 98.87% of Internet traffic takes place-using IPv4. IPv6 stands at 1.13% of Internet traffic as of April of 2013, but considering the Internet traffic one year previous in IPV6 was 0.4% of Internet traffic, rapid adoption and deployment is already occurring.
+                    Despite the fact that 670 quadrillion addresses per square millimeter of the earths surface may seem like an oversaturation of addresses, the 128-bit addresses are in fact not arbitrary. The address size was picked by the IETF specifically to allow easier route aggregation. By allowing easier route aggregation, IPV6 reduces the amount of routing tables needed, which can produce faster routing speeds. This will remove the need for time consuming dynamic routing protocols like the existing routing information protocol, open shortest path first, enhanced interior gateway routing protocol, and border gateway protocol within home, office, and business routers. In addition to the need for development of new dynamic routing protocols to handle IPV6's new 128-bit addresses, without route aggregation it be a much more time consuming function with the new 128-bit addresses due to the number and size of routing tables required for 128-bit addresses.
+                    </p>
+               <h1 class="page-title">Security Concern</h1>
+               <p>Internet security is a continual concern that has been present since it's creation. In an age of shopping, banking, business documents, government records, and other sensitive files being transferred through the Internet at an unprecedented rate, it's of crucial importance that the way we route information has the option of being secured, even for the average home user. The need for better security was a present concern during the development of IPV6 and it was mitigated by the introduction of required authentication headers to ensure a secure end-to-end transference of datagrams. In addition, it also introduced the encapsulating security payload. Both of these protocols are part of IPSec suite which though present in IPV4, has been added to IPV6 by default. Another security concern of using IPv6 over IPv4 is that, it has privacy extension (RFC 4941 Privacy Extensions for Stateless address Auto configuration in IPv6) created by IETF. In fact IPv6 address for a given system may change along time due to privacy extension enabled. Systems using an IPv6 do not need to use Dynamic Host Configuration Protocol to create an address; instead they create the address automatically by combining the router advertisement with a unique identifier. This feature rises to benefits of this random-generated address has no relationship to the Ethernet, and a lifetime will be assigned to the address which the IPv6 will be discarded and re initialized once the expiry time has come. 
+
+                The encapsulating security payload is best used in junction with the Authentication Header, and supports two configuration types. Tunnel mode encapsulates the entire datagram in the encapsulating security payload, whereas transport mode only encapsulates the transport layer of the protocol. These modes and the method of encapsulation are unchanged from the IPSec suite for IPV4.
+                
+                In IPV4, encryption wasn't a part of protocol, and in response to its lack of encryption to securely transfer packets; a method was developed to provide encryption services for packets of data transferred in IPV4. This way to authenticate from end-to-end with users was named IPSec suite, which is composed of functions available through primarily three protocols and takes place on the 4th layer, essentially masquerading as a component of the 3rd layer of the OSI model. Though IPSec provides a low-level method of encryption which is ideal for machine-level encryption but alone cannot be relied upon for enterprise situations and is best used with the addition of security on the software level. However IPSec provides IPV4 with a much-needed service and was widely adopted, and is still used today. With the development of IPV6, IPSec is added as an optional part of the protocol that is integrated, not requiring an add-on like in the case of IPV4. This provides easier deployment for security within home networks and small businesses.
+                </p> 
+                <h1 class="page-title">Types of Deployments Model</h1>    
+                <p>There are three types of IPv6 deployments models, which consist of Dual-stack model, Hybrid model, and Service block mode that are most commonly used in the enterprise. Dual-Stack model (DSM), the most versatile model to use IPv6 in existing IPv4, is based on dual-stack transition mechanism. The most advantage of using this model is that it does not require tunneling and both versions of IP addresses can be deployed at the same time on the same network interfaces. The most important consideration of using this model is to be sure that the hardware using this model supports IPv6 in campus network. Hybrid model is the technique to encapsulate IPv6 in IPv4. It takes one or more independent transition mechanism and provide the with the same deployment design. It passes through three main steps for IPv6 transition mechanism such as Dual-stack, Intra-Site Automatic Tunnel Addressing Protocol (ISATAP) and manually configured tunnels. Finally the last deployment model is called Service block model (SBM), which is mainly similar to HB model except the occurrence of tunnel termination.</p>
+                <h1>Migration from IPv4 to IPv6</h1>
+                <p>The Internet Engineering Task Force has created various methods to help migration from IPv4 to Internet Protocol version 6. These methods are divided into three types such as Dual-Stack, Tunneling and Translation. A dual-task device is a host, which runs both IPv4 and IPv6 simultaneously, allows both devices using either IPv4 or IPv6 to exist on the same network at the same time. Tunneling is the way of forwarding IPv6 packets on IPv4-only networks. In translation, Network Address Translation 64 (NAT64) allows devices using IPv6-only address to communicate with IPv4-only devices. It breaks down IPv6 address and converts that into an IPv4 simulated address, which can be read by IPv4-only devices. These migration methods provide benefit for companies, which are not putting efforts on spending money and transferring all their devices into IPv6. This brings just a partial spent of money having the features of using both versions of Internet protocol addresses.
+
+                    The authentication header provides authentication and integrity, which protect against tampering with the payload from intercepting sources. Essentially the authentication header's purpose is to indicate the authentication information in the datagram. The authentication header is composed of six fields: 8 bits for the next header field to identify the next payload, 8 bits to indicate the payload length, 32 bits for the security association used in the datagram called the security parameters index (SPI) field and 16 bits that are reserved for future use which can allow expansion of the protocol, and sequence number which protects from replay attacks by numbering each packet in order. The final segment is the authentication data, or integrity check value, which can be a variable length. The contents of the authentication data vary depending on the specification of authentication transformation. From IPV4, the fields for payload length and integrity check value have been increased so it can be in a multiple of 8-octets to adhere to the boundary for IPV6.
+                    </p>
+                    <h1>Summary</h1>
+                    <p>To wrap up this essay, Internet Protocol version 6 is a lot advance from its previous 4th version. This can hold an abundance of IP addresses 3.4x10^38, in other word 340 trillion trillion trillion globally addresses. It is made up of 128-bit values instead of its formal version of 32-bit values. These large addresses reduce the amount of routing table need and reduce the need for further protocols to allot addresses. The new feature of IP address is not anymore represented by dotted decimal notation; rather it is represented as hexadecimal digits, which allows a maximum 32 hexadecimal digits. Despite the fact of holding enormous addresses, IPv6 removes the need for time consuming on Dynamic Host Configuration Protocol. IPv6 brings a lot more secure network reliability by introduction of required authentication headers to ensure a secure end-to-end transference of datagrams and encapsulating security payload. With having the feature of not relying on requiring Dynamic Host Configuration Protocol for IPv6 and random-generated addresses, it redundant the relationship of the IP address to the Ethernet and provides a lifetime for each particular address and after all it ends up with not being easily vulnerable with network attacks. IPv6 has a much simpler address deployment that its formal version IPv4. There are three types of IPv6 deployments models, which are Dual-stack model, Hybrid model and Service block mode. Three main types for this version are used such as Unicast, Multicast and Anycast where each type identifies the interface on IPv6 differently. And finally there are three methods used to migrate from IPv4 to IPv6 such Dual-Stack, Tunneling and Translation.</p>
+                    <h1>Citation:</h1>
+                    <p>The advantages of IPv6. Advantages of IPv6 | IPv6 Now. (n.d.). Retrieved August 11, 2022, from http://www.ipv6now.com.au/primers/IPv6Advantages.php </p>
+                    <p>Archiveddocs. (n.d.). What is IPSec?: Security policy; Security Services. Security Policy; Security Services | Microsoft Docs. Retrieved August 11, 2022, from https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc776369(v=ws.10)?redirectedfrom=MSDN </p>
+                    <p>Draft-gont-OPSEC-ipv6-host-scanning-00. Document search and retrieval page. (n.d.). Retrieved August 11, 2022, from https://datatracker.ietf.org/doc/html/draft-gont-opsec-ipv6-host-scanning-00 </p>
+            </article>
+
+            <aside id="sidebar">
+                <div class="dark">
+                <h3> Table of Contents</h3>
+                <h3>Introduction</h3>
+                <h3>128-bit Addresses</h3>
+                <h3>Security Concern</h3>
+                <h3>Types of Deployments Model</h3>
+                <h3>Types of Addresses</h3>
+                <h3>Migration from IPv4 to IPv6</h3>
+                <h3>Summary</h3>
+                <h3>Citation</h3>
+
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <p>Data Communications Fundamentals Assignment02, Copyright &copy; 2022</p>
+    </footer>
+
+</body>
+</html>
